@@ -1,0 +1,35 @@
+Anaconda Installer Log - /var/log/anaconda/syslog
+
+2024-02-13 14:30:00 - INFO - Starting Anaconda installation process
+2024-02-13 14:30:05 - INFO - Detected hardware: CPU: Intel Core i5, RAM: 8GB, Disk: 256GB SSD
+2024-02-13 14:30:10 - INFO - Partitioning disk: /dev/sda
+2024-02-13 14:30:15 - WARNING - Insufficient free space on /dev/sda1 for installation
+2024-02-13 14:30:20 - INFO - Creating new partition: /dev/sda2 - Size: 50GB - File system: ext4
+2024-02-13 14:30:25 - INFO - Installing packages: base, kernel, desktop-environment
+2024-02-13 14:30:30 - ERROR - Failed to install package: nvidia-driver-XYZ
+                                Error: Dependency resolution failed
+2024-02-13 14:30:35 - INFO - Configuring network settings: DHCP enabled
+2024-02-13 14:30:40 - INFO - Setting up bootloader: GRUB2
+2024-02-13 14:30:45 - INFO - Installation complete
+2024-02-13 14:30:50 - INFO - Rebooting system
+2024-02-13 14:30:00 - INFO - Starting Anaconda installation process
+2024-02-13 14:30:05 - INFO - Detected hardware: CPU: Intel Core i7, RAM: 16GB, Disk: 512GB SSD
+2024-02-13 14:30:10 - INFO - Partitioning disk: /dev/sda
+2024-02-13 14:30:15 - WARNING - Insufficient free space on /dev/sda1 for installation
+2024-02-13 14:30:15 - INFO - Resizing /dev/sda1 to 100GB
+2024-02-13 14:30:20 - INFO - Creating new partition: /dev/sda2 - Size: 100GB - File system: ext4
+2024-02-13 14:30:25 - INFO - Creating swap partition: /dev/sda3 - Size: 16GB
+2024-02-13 14:30:30 - INFO - Installing packages: base, kernel, desktop-environment
+2024-02-13 14:30:35 - INFO - Configuring package manager and repositories
+2024-02-13 14:30:40 - INFO - Installing additional software: code-editors, development-tools
+2024-02-13 14:30:45 - ERROR - Failed to install package: nvidia-driver-XYZ
+                                Error: Dependency resolution failed
+2024-02-13 14:30:50 - INFO - Configuring network settings: DHCP enabled
+2024-02-13 14:30:55 - INFO - Setting up user accounts: username - john_doe
+2024-02-13 14:31:00 - INFO - Setting up root password
+2024-02-13 14:31:05 - INFO - Configuring timezone: America/New_York
+2024-02-13 14:31:10 - INFO - Setting up bootloader: GRUB2
+2024-02-13 14:31:15 - INFO - Generating initramfs
+2024-02-13 14:31:20 - INFO - Installation complete
+2024-02-13 14:31:25 - INFO - Rebooting system
+
