@@ -1,5 +1,6 @@
 #! /bin/bash
 
-let amt=$(ps -u kutsalo.ap | wc -l)-2
+let amt=$(ps -u user | wc -l)-3 #bash, script, ps
 echo $amt > first.txt
-ps -u kutsalo.ap | awk '{print $1,$4}'
+ps -u user
+ps -u user -o pid,cmd | head -n -4
