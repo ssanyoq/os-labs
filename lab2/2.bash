@@ -1,4 +1,4 @@
 #! /bin/bash
 
-pgrep -f "^/home/*" > second.txt
+pgrep -f "^/sbin/" > second.txt
 
