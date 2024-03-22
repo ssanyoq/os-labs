@@ -1,6 +1,6 @@
 #! /bin/bash
 
-DELAY=60
+DELAY=10
 
 
 #if [[ -v array[a] ]] then echo 'aaaaaaa'
@@ -28,9 +28,13 @@ end_time=$(( $(date +%s) + $DELAY ))
 while [ $(date +%s) -lt $end_time ]; do 
 	cur_pids=$(pgrep -d ' ' .)
 	for pid in $cur_pids; do
+
 		if [[ -d /proc/$pid ]] ;then
 			read_bytes=$(grep "read_bytes" "/proc/$pid/io" | awk '{print $2}')
 			new[$pid]=$read_bytes
+#			if [[ pid -eq 28039 ]]; then
+#				echo ${new[$pid]}
+#			fi
 		fi
 	done
     	sleep 1
@@ -42,7 +46,7 @@ done
 #done
 
 >tmp/data.txt
-
+#echo ${new[28039]} ${retro[28039]}
 for pid in "${!new[@]}"
 do
 	if [[ new[$pid] -eq 0 ]] then
