@@ -10,3 +10,6 @@ clear:
 	killall 4-gen.bash
 	rm fifo5
 	rm pid.txt
+
+killall:
+	killall 4-gen.bash
