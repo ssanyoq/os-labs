@@ -3,6 +3,8 @@
 
 BACKUP_DIR=$HOME
 SOURCE_DIR=$HOME/source
+LOG_FILE=$HOME/backup-report
+
 let MIN_ALLOWED_DIFF_S=7*24*60*60
 
 cur_date=$(date +"%Y-%m-%d")
@@ -33,4 +35,5 @@ mkdir $backup_path
 
 cp -R $SOURCE_DIR/* $backup_path
 
+echo "New backup: $backup_path made at $(date +'%Y-%m-%d %H:%M:%S')" >> $LOG_FILE
 
