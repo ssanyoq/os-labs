@@ -36,4 +36,6 @@ mkdir $backup_path
 cp -R $SOURCE_DIR/* $backup_path
 
 echo "New backup: $backup_path made at $(date +'%Y-%m-%d %H:%M:%S')" >> $LOG_FILE
-
+echo "Files:" >> $LOG_FILE
+tree $SOURCE_DIR >> $LOG_FILE
+echo "" >> $LOG_FILE
