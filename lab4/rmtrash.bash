@@ -41,11 +41,11 @@ if ! [ -z "$(ls -A trash)" ]; then
    fi
   done
 fi 
-ln "$1" trash/$min_number
+ln -- "$1" trash/$min_number
 echo "Moved file to: trash/$min_number"
 
 target="'"$PWD/${1//\'/\\\'}"'"
 
 echo "$target  $min_number" >> $LOG_FILE
 
-rm "$1"
+rm -- "$1"
