@@ -8,6 +8,5 @@ fi
 for ((i = 0; i < $1; i++)); do
   ./mem-intense.bash $i &
 done
-
-echo "Completed"
+wait
 
