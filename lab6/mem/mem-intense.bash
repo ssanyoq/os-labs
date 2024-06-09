@@ -5,7 +5,7 @@ if [[ -z $1 ]]; then
   exit 1
 fi
 
-FILE="data/out$1.txt"
+FILE="../data/out$1.txt"
 >$FILE
 
-cat "data/test$1.txt" | awk '{print $1 * 2}' > $FILE
+cat "../data/test$1.txt" | awk '{print $1 * 2}' > $FILE
