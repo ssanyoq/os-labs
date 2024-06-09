@@ -5,9 +5,8 @@ if [[ -z $1 ]]; then
   exit 1
 fi
 
-for ((i = 0; i < $(($1 - 1)); i++)); do
+for ((i = 0; i < $1; i++)); do
   ./cpu-intense.bash $RANDOM &
 done
-./cpu-intense.bash $RANDOM
-echo "Completed"
+wait
 
