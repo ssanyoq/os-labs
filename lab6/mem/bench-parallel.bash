@@ -2,7 +2,7 @@
 
 >data/parallel.log
 
-for ((i = 0; i < 20; i++)); do
+for ((i = 1; i <= 20; i++)); do
   for ((j = 0; j < 10; j++)); do
     time=$( (time ./parallel-launch.bash $i > /dev/null 2>&1) 2>&1 )
     
