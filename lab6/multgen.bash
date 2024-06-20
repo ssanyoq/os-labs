@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# Script for generating multiple files via gen.bash
+
 if [[ -z $1 ]]; then
   echo "Amount is not specified"
   exit 1

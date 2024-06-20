@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Script that does CPU intensive task. It counts
+# some random sequence element, I calibrated it to
+# calculate for around 3.6 seconds on my PC.
+# Time of calculation does not change by changing the 
+# argument of a script
+
 # Function to perform CPU-intensive operations
 cpu_intensive_task() {
     local n=$1
@@ -8,7 +14,7 @@ cpu_intensive_task() {
 
     for ((i = 0; i < iterations; i++)); do
         result=$((result + (n * n) - (n / 2) + (n % 3) - (n ** 3)))
-        result=$((result ^ i))  # Adding some additional operations to keep the CPU busy
+        result=$((result ^ i))
     done
 
     echo $result
